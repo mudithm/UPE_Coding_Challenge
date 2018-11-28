@@ -94,6 +94,8 @@ def findSolution(array, xpos, ypos, width, height):
 
 
 
+
+
 # General Request info
 API_url = "http://ec2-34-216-8-43.us-west-2.compute.amazonaws.com"
 payload = {'uid':'404937201'}
@@ -117,17 +119,16 @@ while stat != "FINISHED":
 	gameStatus = (requests.get(API_url + "/game?token=" + token, headers=getHeaders)).json()
 	if gameStatus["status"] == "FINISHED":
 		stat = "FINISHED"
-		break
-	print(gameStatus)	
+		break	
 	width = gameStatus["maze_size"][0]
 	height = gameStatus["maze_size"][1]
 	xpos = gameStatus["current_location"][0]
 	ypos = gameStatus["current_location"][1]
 
 	visited = [[0 for j in range(width)] for k in range(height)]
-	#print(visited)
-	# Solve the maze
-	print(findSolution(visited, xpos, ypos, width, height))
+
+
+	findSolution(visited, xpos, ypos, width, height)
 	visited.clear()
 
 
