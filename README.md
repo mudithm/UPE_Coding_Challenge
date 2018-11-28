@@ -1,5 +1,5 @@
 <h4>UPE Coding Challenge</h4>
-*Mudith Mallajosyula*
+_Mudith Mallajosyula_
 
 ---
 
