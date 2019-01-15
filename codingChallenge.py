@@ -98,7 +98,7 @@ def findSolution(array, xpos, ypos, width, height):
 
 # General Request info
 API_url = "http://ec2-34-216-8-43.us-west-2.compute.amazonaws.com"
-payload = {'uid':'404937201'}
+payload = {'uid':'---------'}
 postHeaders = {'content-type': 'application/json'}
 getHeaders = {'content-type': 'application/x-www-form-urlencoded'}
 
